@@ -1,0 +1,42 @@
+// Question 2:
+// Destructure the following object:
+// const student = {
+//   name: " Helsinki",
+//   age: 24,
+//   projects: {
+//     diceGame: "Two player dice game using JavaScript",
+//   },
+// };
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solution2</title>
+</head>
+<body>
+    <h1 style="text-align:center; font-family:Arial, Helvetica, sans-serif ; ">Open the console</h1>
+    <script>
+
+    const student = {
+    name: "Helsinki",
+    age: 24,
+    projects: {
+    diceGame: "Two player dice game using JavaScript",
+    },
+    };
+
+    let {
+    name,
+    age,
+    projects: { diceGame },
+    } = student;
+
+    // showing the object(key:value)
+    console.log({ name, age });
+    // showing the values
+    console.log(name, age, diceGame);
+
+    </script>
+</body>
+</html>

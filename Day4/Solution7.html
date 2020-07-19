@@ -1,0 +1,49 @@
+// Question 7:
+// Prime number between interval
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solution7</title>
+</head>
+<body>
+
+    <div class="container"
+        style='max-width: 90%; margin: auto; background-color: rgb(119, 190, 207); font-family: Lucida Sans;'>
+        
+        <h2>Prime Number between Interval</h2>
+        Lower Interval: <input id="start_range" type='number'><br /><br />
+        Upper Interval: <input id="end_range" type='number'><br /><br />
+        <input id="btnn" type="button" value="Print Prime Numbers" />
+        <p id="primes"></p>
+    </div>
+
+    <h1 style="text-align:center; font-family:Arial, Helvetica, sans-serif ; ">Open the console</h1>
+
+    <script>
+
+    document.getElementById("btnn").onclick = function () {
+    let start = Number(document.getElementById("start_range").value);
+    let end = Number(document.getElementById("end_range").value);
+
+    for (j = start; j <= end; j++) {
+        if (j == 1) {
+        continue;
+        }
+        flag = 1;
+        for (i = 2; i <= j / 2; ++i) {
+        if (j % i == 0) {
+            flag = 0;
+            break;
+        }
+        }
+        if (flag == 1) {
+        console.log(j);
+        }
+    }
+    };
+
+    </script>
+</body>
+</html>

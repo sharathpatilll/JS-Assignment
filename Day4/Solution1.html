@@ -1,0 +1,32 @@
+// Question 1 :
+// Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solution1</title>
+</head>
+<body>
+    <h1 style="text-align:center; font-family:Arial, Helvetica, sans-serif ; ">Open the console</h1>
+    <script>
+
+    // Prompt
+
+    for (let i = 0; i<101 ; i++){
+    if (i%3==0){
+        console.log(`Here multiple is ${i}. Printing 'fizz' on multiple of 3.`);
+    }
+    if (i%5==0) {
+        console.log(`Here multiple is ${i}. Printing 'buzz' on multiple of 5.`);
+
+    }
+    if (i%5==0 && i%3==0) {
+        console.log(`Here multiple is ${i}. Printing 'fizzbuzz' on multiple of 3 and 5.`);
+    }
+    }
+    
+    </script>
+</body>
+</html>

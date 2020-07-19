@@ -1,0 +1,33 @@
+// Question 3:
+// Imagine you are going out to do some grocery shopping.So you have an array called shoppingList with all the products you want to buy.
+// Now that you are inside of the shop, you have a basket with all the products from your list, but you want toadd a few more.Create a new array called shoppingBasket, that will be a copy of the shoppingList array, and add somenew products into it.
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solution3</title>
+</head>
+<body>
+    <h1 style="text-align:center; font-family:Arial, Helvetica, sans-serif ; ">Open the console</h1>
+    <script>
+    
+    shoppingList = ["Apple", "Grapes", "Orange", "Tomato"];
+    shoppingList.push("Elephant Jaisa Apple");
+    console.log("shoppingList:", shoppingList);
+
+    shoppingBasket = [
+    "Brinjal",
+    "Carrot",
+    "Potato",
+    ...shoppingList,
+    "Pav",
+    "Lemons",
+    ];
+    shoppingBasket.push("Cabbage");
+
+    console.log("shoppingBasket:", shoppingBasket);
+
+    </script>
+</body>
+</html>
