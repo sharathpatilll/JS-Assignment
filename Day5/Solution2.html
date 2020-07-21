@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Solution2</title>
+</head>
+<body>
+    <h1 style="text-align:center; font-family:Arial, Helvetica, sans-serif ; ">Open the console</h1>
+    <script>
+
+        class User{
+            constructor(name, age, email){
+                this.name = name;
+                this.age = age;
+                this.email= email;
+            }
+            login(){
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout(){
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+        }
+        class Moderator extends User{
+            constructor(name, age, email){
+                super(name, age, email);
+                this.coins=0;
+
+            }
+            addCoins(){
+                this.coins++;
+                console.log(`${this.name} has ${this.coins} coins(s) now.`);
+                return this;
+            }
+            removeCoins(){
+                this.coins--;
+                console.log(`${this.name} has ${this.coins} coin(s) now.`);
+                return this;
+            }   
+        }
+        let user1 = new User("Ramesh", 20, "xyz@gmail.com");
+        user1.login().logout();
+        
+        let user2 = new Moderator("Rajesh", 24, "abc@gmail.com");
+        user2.addCoins().addCoins();
+        user2.removeCoins();
+
+    </script>
+</body>
+</html>
