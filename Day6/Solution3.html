@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+<body id= "darkbg" style = "">
+    <h1 id ="wel">Day 6</h1>
+    <h3 id="time"></h3>
+    <button id="btn">Dark Mode</button>
+    <script>
+        let attr = document.getElementById('darkbg');
+        let name = prompt("Enter name.");
+        const greet = document.getElementById('wel')
+        greet.innerHTML = `Welcome ${name} to Day 6 Assignment`;
+        const dmode = document.getElementById('btn');
+
+dmode.onclick = function dark(){
+    
+        document.body.style.backgroundColor = "black";
+        document.body.style.color="white";
+}
+    
+attr.onclick = function dark(){
+        if(btn.innerText == "Dark Mode"){
+                btn.innerText = "Light Mode"
+                attr.classList.remove("white");
+                attr.classList.add("black");
+        }
+        else{
+                btn.innerText = "Dark Mode"
+                attr.classList.remove("black");
+                attr.classList.add("white");
+        }
+}
+const ctime = document.getElementById('time');
+function clock(){
+ let today = new Date();
+ let time = today.toLocaleTimeString(); 
+ ctime.innerText = time;      
+}
+setInterval(clock,1000);
+    </script>
+</body>
+</html>

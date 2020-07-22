@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solution1</title>
+</head>
+<body>
+    <h1 style="text-align:center; font-family:Arial, Helvetica, sans-serif ; ">Assignment Day 6</h1>
+    <script>
+        let array = ["black", "blue", "yellowgreen", "green"];
+        var i = 0;
+        function changeColor(){
+            let color = array[i++];
+            document.body.style.backgroundColor = `${color}`;
+        }
+
+        setInterval(changeColor, 5000)
+    </script>
+</body>
+</html>
